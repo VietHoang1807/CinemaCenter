@@ -8,36 +8,53 @@ import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 import org.springframework.data.mongodb.core.mapping.Field;
 
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
 @Document(collection = "Show_Film")
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
 public class ShowFilmEntity {
 	
 	@Id
-	public String Id;
+	private String Id;
 	
 	@Field(name = "Code_Film")
-	public String CodeFilm;
+	private String CodeFilm;
 	
-	public Integer Fllows;
+	@Field
+	private Integer Fllows;
 	
-	public LocalDate DayShow;
+	@Field
+	private LocalDate DayShow;
+
+	@Field
+	private LocalDate EndShow;
 	
-	public LocalDate EndShow;
+	@Field
+	private String TypeFilm;
 	
-	public String TypeFilm;
+	@Field
+	private String Descibe;
 	
-	public String Descibe;
+	@Field
+	private Binary Image1;
 	
-	public Binary Image1;
+	@Field
+	private Binary Image2;
 	
-	public Binary Image2;
+	@Field
+	private Binary Image3;
 	
-	public Binary Image3;
+	@Field
+	private Binary Image4;
 	
-	public Binary Image4;
+	@Field
+	private Binary Image5;
 	
-	public Binary Image5;
-	
-	public InputStream Video;
-	
-	
+	@Field
+	private InputStream Video;
+
 }

@@ -8,6 +8,8 @@ import org.springframework.data.annotation.Transient;
 import org.springframework.data.mongodb.core.mapping.Document;
 import org.springframework.data.mongodb.core.mapping.Field;
 
+import com.mongodb.lang.NonNull;
+
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -19,33 +21,40 @@ import lombok.NoArgsConstructor;
 public class UsersEntity {
 
 	@Id
-	public String id;
+	private String id;
+	
+	@Field(name = "Role")
+	private String Role;
 	
 	@Field(name = "User_Mail")
-	public String Email;
+	@NonNull
+	private String Email;
 	
 	@Field(name = "User_Name")
-	public String Name;
+	private String Name;
+	
+	@Field(name = "Password")
+	private String Password;
 	
 	@Field(name = "CMND")
-	public String CMND;
+	private String CMND;
 	
 	@Field(name = "Number_Phone")
-	public Integer Phone;
+	private Integer Phone;
 	
 	@Field(name = "Birth_Day")
-	public LocalDate BirthDay;
+	private LocalDate BirthDay;
 	
 	@Field(name = "Student")
-	public Boolean Student;
+	private Boolean Student;
 	
 	@Field(name = "Accumulated_Points")
-	public Long Points;
+	private Long Points;
 	
 	@Field(name = "Tickets_Coding")
-	public String Ticket;
+	private String Ticket;
 	
 	@Transient
-	public List<TicketFilm> TicketsFilm;
+	private List<TicketFilm> TicketsFilm;
 	
 }
