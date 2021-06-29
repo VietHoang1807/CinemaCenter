@@ -8,7 +8,14 @@ import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 import org.springframework.data.mongodb.core.mapping.Field;
 
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
 @Document(collection = "Show_Film")
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
 public class ShowFilmEntity {
 	
 	@Id
@@ -17,7 +24,7 @@ public class ShowFilmEntity {
 	@Field(name = "Code_Film")
 	public String CodeFilm;
 	
-	public Integer Fllows;
+	public Double Fllows;
 	
 	public LocalDate DayShow;
 	

@@ -7,7 +7,14 @@ import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 import org.springframework.data.mongodb.core.mapping.Field;
 
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
 @Document(collection = "ShowTime")
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
 public class ShowTimeEntity {
 
 	@Id
