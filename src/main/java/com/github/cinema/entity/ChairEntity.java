@@ -1,5 +1,6 @@
 package com.github.cinema.entity;
 
+import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 import org.springframework.data.mongodb.core.mapping.Field;
 
@@ -13,13 +14,16 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class ChairEntity {
 	
+	@Id
+	private String Id;
+	
 	@Field(name = "Position")
-	public String Position;
+	private String Position;
 	
 	@Field(name = "Chair_Types")
-	public String ChairTypes;
+	private String ChairTypes;
 	
 	@Field(name = "Seat_Coding")
-	public String Seat;
+	private String Seat;
 	
 }
