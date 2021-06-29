@@ -21,15 +21,49 @@ import lombok.NoArgsConstructor;
 public class UsersEntity {
 
 	@Id
-	public String id;
+	private String id;
 	
 	@Field(name = "User_Mail")
 	@NonNull
-	public String Email;
+	private String Email;
 	
 	@Field(name = "User_Name")
 	@NonNull
-	public String Name;
+	private String Name;
+	
+
+	@Field(name = "Password")
+	@NonNull
+	private String password;
+	
+	@Field(name = "CMND")
+	@NonNull
+	private String CMND;
+	
+	@Field(name = "Number_Phone")
+	@NonNull
+	private Integer Phone;
+	
+	@Field(name = "Birth_Day")
+	private LocalDate BirthDay;
+	
+	@Field(name = "Student")
+	private Boolean Student;
+	
+	@Field(name = "Accumulated_Points")
+	private Long Points;
+	
+	@Field(name = "Tickets_Coding")
+	private String Ticket;
+
+	@Field(name = "Role")
+	private String role;
+	
+	@Transient
+	private List<TicketFilm> TicketsFilm;
+	
+	@Transient
+	private String passwordCf;
 	
 	public String getId() {
 		return id;
@@ -135,37 +169,5 @@ public class UsersEntity {
 		this.passwordCf = passwordCf;
 	}
 
-	@Field(name = "Password")
-	@NonNull
-	public String password;
-	
-	@Field(name = "CMND")
-	@NonNull
-	public String CMND;
-	
-	@Field(name = "Number_Phone")
-	@NonNull
-	public Integer Phone;
-	
-	@Field(name = "Birth_Day")
-	public LocalDate BirthDay;
-	
-	@Field(name = "Student")
-	public Boolean Student;
-	
-	@Field(name = "Accumulated_Points")
-	public Long Points;
-	
-	@Field(name = "Tickets_Coding")
-	public String Ticket;
-
-	@Field(name = "Role")
-	public String role;
-	
-	@Transient
-	public List<TicketFilm> TicketsFilm;
-	
-	@Transient
-	public String passwordCf;
 	
 }

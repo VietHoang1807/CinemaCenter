@@ -17,19 +17,19 @@ import lombok.NoArgsConstructor;
 public class CinemaEntity {
 
 	@Id
-	public String Id;
+	private String Id;
 	
 	@Field(name = "Cinema_Coding")
-	public String Cinema;
+	private String Cinema;
 	
 	@Field(name = "Number_Chair")
-	public String NumberChair;
+	private String NumberChair;
 	
 	@Field(name = "Maintenance")
-	public Boolean Maintenance;
+	private Boolean Maintenance;
 	
 	@Field(name = "Chair")
-	public List<ChairEntity> ChairCencima;
+	private List<ChairEntity> ChairCencima;
 	
 	
 }

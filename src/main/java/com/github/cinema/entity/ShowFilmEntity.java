@@ -19,32 +19,43 @@ import lombok.NoArgsConstructor;
 public class ShowFilmEntity {
 	
 	@Id
-	public String Id;
+	private String Id;
 	
 	@Field(name = "Code_Film")
-	public String CodeFilm;
+	private String CodeFilm;
 	
-	public Double Fllows;
+	@Field(name = "Fllows")
+	private Double Fllows;
 	
-	public LocalDate DayShow;
+	@Field(name = "DayShow")
+	private LocalDate DayShow;
 	
-	public LocalDate EndShow;
+	@Field(name = "EndShow")
+	private LocalDate EndShow;
 	
-	public String TypeFilm;
+	@Field(name = "TypeFilm")
+	private String TypeFilm;
 	
-	public String Descibe;
+	@Field(name = "Descibe")
+	private String Descibe;
 	
-	public Binary Image1;
+	@Field(name = "Image1")
+	private Binary Image1;
 	
-	public Binary Image2;
+	@Field(name = "Image2")
+	private Binary Image2;
 	
-	public Binary Image3;
+	@Field(name = "Image3")
+	private Binary Image3;
 	
-	public Binary Image4;
+	@Field(name = "Image4")
+	private Binary Image4;
 	
-	public Binary Image5;
+	@Field(name = "Image5")
+	private Binary Image5;
 	
-	public InputStream Video;
+	@Field(name = "Video")
+	private InputStream Video;
 	
 	
 }

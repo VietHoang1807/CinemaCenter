@@ -18,26 +18,26 @@ import lombok.NoArgsConstructor;
 public class ShowTimeEntity {
 
 	@Id
-	public String Id;
+	private String Id;
 	
 	@Field(name = "Code_Cinema")
-	public String CodeCinema;
+	private String CodeCinema;
 	
 	@Field(name = "Code_Film")
-	public String CodeFilm;
+	private String CodeFilm;
 	
 	@Field(name = "Code_Show")
-	public String CodeShow;
+	private String CodeShow;
 	
 	@Field(name = "Surcharge")
-	public int Surcharge;
+	private int Surcharge;
 	
 	@Field(name = "Start_Hour")
-	public LocalDateTime StartHour;
+	private LocalDateTime StartHour;
 	
 	@Field(name = "End_Hour")
-	public LocalDateTime EndHour;
+	private LocalDateTime EndHour;
 	
 	@Field(name = "Date")
-	public LocalDate Date;
+	private LocalDate Date;
 }
